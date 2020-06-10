@@ -1,0 +1,19 @@
+@import "../../assets/colors";
+
+.button {
+  width: 200px;
+  border: none;
+  outline: none;
+  background-color: $primary-yellow;
+  padding: 16px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  opacity: 1;
+  transition: 0.1s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

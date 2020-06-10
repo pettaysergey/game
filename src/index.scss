@@ -1,0 +1,34 @@
+@import "./assets/colors";
+
+@font-face {
+  font-family: "GameFont";
+  src: url("./assets/fonts/PermanentMarker-Regular.ttf") format("opentype");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: GameFont;
+  color: $primary-black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}

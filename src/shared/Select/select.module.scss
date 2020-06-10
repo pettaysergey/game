@@ -1,0 +1,24 @@
+@import "../../assets/colors";
+
+.combobox {
+  :global {
+    .combobox__control {
+      width: 200px;
+      cursor: pointer;
+    }
+
+    .combobox__option {
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-yellow;
+      }
+    }
+
+    .combobox__option--is-selected {
+      background-color: $primary-yellow;
+      color: $primary-black;
+    }
+  }
+}

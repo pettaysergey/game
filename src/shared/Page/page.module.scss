@@ -1,0 +1,9 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 0 0;
+  height: 100%;
+  background-image: url(../../assets/img/bg/bg_light.jpg);
+  background-size: cover;
+}
