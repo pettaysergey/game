@@ -3,22 +3,16 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Main from "./containers/Main";
 import Settings from "./containers/Settings";
 import "./App.css";
+import MusicPlayer from "./shared/MusicPlayer";
+import { musicSelector } from "containers/Main/store/selectors";
+import { useSelector } from "react-redux";
 
 function App() {
-  const audioRef = React.useRef(null);
+  const getMusic = useSelector(musicSelector);
 
-  React.useEffect(() => {
-    // (audioRef as any).current.play();
-  }, []);
   return (
     <div className="App">
-      <audio ref={audioRef}>
-        <source
-          src={"https://www.bensound.com/bensound-music/bensound-buddy.mp3"}
-          type="audio/ogg"
-        />
-        Your browser does not support the audio element.
-      </audio>
+      <MusicPlayer music={getMusic} />
       <Switch>
         <Route exact path="/" component={Main} />
         <Route path="/settings" component={Settings} />

@@ -1,0 +1,33 @@
+@import "../../assets/colors";
+
+.toggleContainer {
+  position: relative;
+  width: 66px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: $primary-white;
+  border: 1px solid $primary-black-light;
+  cursor: pointer;
+  transition: 0.3s;
+
+  .toggleHandler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: $primary-black;
+    transition: 0.3s;
+  }
+
+  &.active {
+    background-color: $primary-yellow;
+
+    .toggleHandler {
+      background-color: $primary-white;
+      left: 36px;
+    }
+  }
+}
