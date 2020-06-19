@@ -5,12 +5,13 @@ import { User } from "./types";
 
 export const actions = {
   toggleMusic: createAction(constants.TOGGLE_MUSIC),
+  changeDifficult: createAction(constants.CHANGE_DIFFICULT),
 };
 
 const initialUserState = {
   userName: "",
   difficult: "normal",
-  music: true,
+  music: false,
 };
 
 export const userReducer = (
@@ -20,6 +21,8 @@ export const userReducer = (
   switch (action.type) {
     case constants.TOGGLE_MUSIC:
       return { ...state, music: action.payload };
+    case constants.CHANGE_DIFFICULT:
+      return { ...state, difficult: action.payload };
     default:
       return state;
   }
