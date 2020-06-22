@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Main from "./containers/Main";
 import Settings from "./containers/Settings";
+import Levels from "./containers/Levels";
 import "./App.css";
 import MusicPlayer from "./shared/MusicPlayer";
 import { getMusic } from "containers/Main/store/selectors";
@@ -16,6 +17,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Main} />
         <Route path="/settings" component={Settings} />
+        <Route path="/level" component={Levels} />
         <Redirect to="/" />
       </Switch>
     </div>
